@@ -1,9 +1,10 @@
 import {Suspense} from 'react';
 import {DataView} from '~/components';
+import {PAGEKEY} from '~/data/constants';
 import {data} from '~/data/data';
 
 export default function PricePlansPage() {
-  const dataKey = 'Price plans';
+  const dataKey = PAGEKEY.PRICE_PLANS;
   const initialData = data[dataKey];
 
   return (

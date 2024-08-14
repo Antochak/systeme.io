@@ -1,7 +1,8 @@
+import {PAGEKEY} from './constants';
 import type {PageType, PricePlanType, ProductType} from './types';
 
 export const data = {
-  ['Products']: [
+  [PAGEKEY.PRODUCTS]: [
     {
       id: 14381328,
       name: 'id quis voluptate nostrud',
@@ -103,7 +104,7 @@ export const data = {
       createdAt: '2012-09-24T01:42:32.0Z',
     },
   ] as ProductType[],
-  ['Price plans']: [
+  [PAGEKEY.PRICE_PLANS]: [
     {
       id: 13334466,
       description: 'aute fugiat commodo id',
@@ -175,7 +176,7 @@ export const data = {
       removedAt: '2021-09-09T11:21:13.0Z',
     },
   ] as PricePlanType[],
-  ['Pages']: [
+  [PAGEKEY.PAGES]: [
     {
       id: 23634610,
       title: 'aliquip sit proident veniam tempor',
