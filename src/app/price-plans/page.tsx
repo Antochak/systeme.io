@@ -1,13 +1,14 @@
 import {Suspense} from 'react';
 import {DataView} from '~/components';
-import {Plans} from '~/data';
-import type {PricePlanType} from '~/data/types';
+import {data} from '~/data/data';
 
 export default function PricePlansPage() {
-  const initialData: PricePlanType[] = Plans;
+  const dataKey = 'Price plans';
+  const initialData = data[dataKey];
+
   return (
     <Suspense fallback={'Loading...'}>
-      <DataView initialData={initialData} />
+      <DataView initialData={initialData} tableTitle={dataKey} />
     </Suspense>
   );
 }

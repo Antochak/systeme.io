@@ -1,13 +1,14 @@
 import {Suspense} from 'react';
 import {DataView} from '~/components';
-import {Products} from '~/data';
-import type {ProductType} from '~/data/types';
+import {data} from '~/data/data';
 
 export default function ProductsPage() {
-  const initialData: ProductType[] = Products;
+  const dataKey = 'Products';
+  const initialData = data[dataKey];
+
   return (
     <Suspense fallback={'Loading...'}>
-      <DataView initialData={initialData} />
+      <DataView initialData={initialData} tableTitle={dataKey} />
     </Suspense>
   );
 }
